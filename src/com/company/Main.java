@@ -35,10 +35,10 @@ select country ,count(*) from customer group by country;
 select country ,count(*) from customer group by country order by  country DESC;
 --N-17
 SELECT sum(total_amount), customer_id, COUNT(*) AS count_of_orders  FROM orders
-GROUP BY customer_id  ORDER BY customer_id ;
+GROUP BY customer_id  order by sum(total_amount);
 --N-18
 SELECT sum(total_amount), customer_id, COUNT(*) AS count_of_orders  FROM orders
-GROUP BY customer_id  ORDER BY customer_id ;
+GROUP BY customer_id  HAVING COUNT(*) > 20;
 
 
 
